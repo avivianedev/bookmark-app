@@ -29,3 +29,8 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+
+p {
+  font-size: 1.5em;
+  color: var(--Grayish-Blue)
+}

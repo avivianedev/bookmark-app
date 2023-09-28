@@ -5,6 +5,7 @@ export const HeaderContainer = styled.header`
      padding: 3em;
      align-items: center;
      
+     
 
     @media screen and (max-width: 768px){
         padding: 0;
@@ -24,7 +25,7 @@ export const SectionDesktop = styled.section`
 `
 export const TagImage = styled.img`
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 
 `
 export const SectionMobile = styled.section`
@@ -48,7 +49,7 @@ export const Logo = styled.div`
     height: 100%;
     align-items: center;
     cursor: pointer;
-    z-index: 1;
+    z-index: 3;
 `
 
 
@@ -72,7 +73,7 @@ export const Navbar = styled.nav`
         gap: 1em;
         opacity: 0.8;       
         duration: 2s;
-       
+       z-index: 2;
     }
     
 `
@@ -133,8 +134,7 @@ export const Link = styled.a`
         border-radius:7px;   
         border: 2px solid white;
         background-color: transparent;
-        color: white;
-        
+        color: white;       
     
         
     }
@@ -144,12 +144,13 @@ export const Link = styled.a`
 
 
 export const BtnMenu = styled.button`
+    background-color: var(--Soft-Red);     
     padding: .8em 2em;
-    border: transparent;
-    background-color: var(--Soft-Red);
+    border: transparent;    
     border-radius:7px;
     font-size: 18px;
-    color: white;
+    color: white; 
+    
     font-weight: 500;
     cursor: pointer;
     border: 2px solid transparent;
