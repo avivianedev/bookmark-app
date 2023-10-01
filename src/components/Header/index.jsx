@@ -21,7 +21,8 @@ import {
 
 const Header = () => {
 
-    const [showMenu, SetShowMenu] = useState(false)
+    const [showMenu, SetShowMenu] = useState(false);
+
 
     function showMenuIcon(event) {
         event.preventDefault()
@@ -45,12 +46,7 @@ const Header = () => {
                 </Navbar>
 
             </SectionDesktop>
-
-
-
-
-            <SectionMobile >
-
+            <SectionMobile  >
                 {showMenu ? <Logo className="logo">
                     <LogoImage
                         fillColor="#000"
@@ -66,7 +62,7 @@ const Header = () => {
                         />
                     </Logo>
                 }
-                {showMenu && <Navbar>
+                {showMenu && <Navbar className={showMenu ? 'open' : ''}>
                     <ListContainer>
                         <ListItem><Link onClick={(e) => e.preventDefault()} href="">FEATURES</Link></ListItem>
                         <ListItem><Link onClick={(e) => e.preventDefault()} href="">PRICING</Link></ListItem>
