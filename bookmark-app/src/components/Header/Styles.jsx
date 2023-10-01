@@ -3,9 +3,7 @@ import styled from "styled-components"
 export const HeaderContainer = styled.header`
      display: flex;     
      padding: 3em;
-     align-items: center;
-     
-     
+     align-items: center;       
 
     @media screen and (max-width: 768px){
         padding: 0;
@@ -36,7 +34,7 @@ export const SectionMobile = styled.section`
     width: 100%;
     height: 100%;
     @media screen and (max-width: 768px){       
-        display: flex;
+        display: flex;        
         position: relative;
         padding: 2em;
     }
@@ -50,6 +48,7 @@ export const Logo = styled.div`
     align-items: center;
     cursor: pointer;
     z-index: 3;
+    z-index: ${(props => props.zIndex)}
 `
 
 
@@ -64,7 +63,7 @@ export const Navbar = styled.nav`
         align-items: center;
         justify-content: flex-start;
         width: 100%;    
-        height: 100vh;       
+        min-height: 100vh;       
         flex-direction: column;              
         top:0;
         right: 0;
@@ -74,6 +73,18 @@ export const Navbar = styled.nav`
         opacity: 0.8;       
         duration: 2s;
        z-index: 2;
+
+       .social{
+        display: flex;
+        height: 100vh;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 1em;
+        img{
+        cursor: pointer;
+    }
+        
+       }
     }
     
 `

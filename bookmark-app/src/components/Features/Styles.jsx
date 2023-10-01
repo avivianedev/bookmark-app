@@ -78,10 +78,10 @@ export const FeaturesWrapper = styled.section`
     display: flex;  
     justify-content: center;
     align-items: center;   
-    padding: 2em 0;
+    padding: 2em 0;    
 
     @media screen and (max-width: 768px){
-    padding: 4em 0;    
+    padding: 2em 0;    
     flex-direction: column;
     gap: 2em;
     
@@ -91,25 +91,51 @@ export const FeaturesWrapper = styled.section`
 export const ImageContainer = styled.div`   
    position: relative;    
    width: 40%;
-   height: 100%;   
+   height: 450px;   
 
    @media screen and (max-width: 768px){
     width: 100%;
+    height: 100%;
+   }
+   @media screen and (max-width: 375px){
+    width: 100%;
+    height: 100%;
    }
    
 
 `
 export const ImageFeatures = styled.img`    
     position: relative;     
-    width: 80%;
+    width: 90%;
     height: 100%;    
     z-index: 1;
+
+    animation: go-back 1s;
+
+    @keyframes go-back {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+    @media screen and (max-width: 768px){
+    width: 100%;
+    height: 250px;
+   }
+
+    @media screen and (max-width: 375px){
+    width: 100%;
+    height: 200px;
+   }
 `
 export const ImageEffectFeatures = styled.div`
     position: absolute;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
     top: 25%;    
     left: -30%;
     border-radius:  0 100% 100% 0 ;     

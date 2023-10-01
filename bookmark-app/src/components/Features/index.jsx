@@ -1,7 +1,7 @@
 import "../../lax"
 
 import data from "./data.json"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import {
     FeatureComponent,
@@ -24,15 +24,9 @@ export default function Features() {
     const [indexFeature, SetindexFeature] = useState("feat1")
     const featuresdata = data[0]
 
-    console.log(featuresdata)
-    //const dataFeature = 
-    console.log(featuresdata[indexFeature].image)
-
-
-    console.log()
     return (
         <FeatureComponent>
-            <FeatureDescription>
+            <FeatureDescription className="lax lax_preset_fadeInOut:229.75:0.3 lax_preset_scaleIn:229.75:0.6">
                 <h2>Features</h2>
                 <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
 

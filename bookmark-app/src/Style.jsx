@@ -25,16 +25,11 @@ export const ContentText = styled.section`
     justify-content: flex-end;
     gap: 2em;
     padding:1em 8em;    
-    animation: sliderY 1s;
-
-    @keyframes sliderY {
-    from{
-           transform: translateY(90px) ;
-    }to{
-        transform: translateY(0px)
+    
+    p{
+        animation: appear 3s;
     }
     
-}
 
 
     @media screen and (max-width: 768px){
@@ -58,6 +53,16 @@ export const BtnContainer = styled.div`
 
 export const Title = styled.h1`
     font-size:4rem;    
+    animation: appear 2s;
+
+    @keyframes appear {
+     from {
+        opacity:0
+     }
+    to {
+        opacity:1
+    }
+}
 
     @media screen and (max-width: 768px){
         font-size: 3em;
@@ -73,6 +78,7 @@ export const Btn = styled.button`
     font-weight: 500;
     cursor: pointer;
     border: 2px solid transparent;
+    animation: appear 3s;
     &:hover { 
         border: 2px solid ${(props) => props.colorborderhover};
         background-color: transparent;
@@ -98,14 +104,13 @@ export const Image = styled.img`
     width: 800px;
     position: relative;      
     z-index: 1;
-    animation: go-back 1s;
+    animation: sliderY 2s;
 
-    @keyframes go-back {
-    0% {
-        transform: translateX(100px);
-    }
-    100% {
-        transform: translateX(0);
+    @keyframes sliderY {
+    from{
+           transform: translateY(90px) ;
+    }to{
+        transform: translateY(0px)
     }
 }
 

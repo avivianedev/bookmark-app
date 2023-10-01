@@ -73,9 +73,15 @@ const Header = () => {
                         <ListItem><Link onClick={(e) => e.preventDefault()} href="">CONTACT</Link></ListItem>
                     </ListContainer>
                     <BtnMenu>LOGIN</BtnMenu>
+
+                    <div className="social">
+                        <img src="/assets/images/icon-facebook.svg" alt="logo facebook" />
+                        <img src="/assets/images/icon-twitter.svg" alt="logo twitter" />
+                    </div>
                 </Navbar>}
 
                 {showMenu ? <TagImage src="/assets/images/icon-close.svg" alt="menu-image" onClick={showMenuIcon} /> : <TagImage src="/assets/images/icon-hamburger.svg" alt="menu-image" onClick={showMenuIcon} />}
+
 
             </SectionMobile >
 
