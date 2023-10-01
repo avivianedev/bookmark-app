@@ -8,12 +8,13 @@ export const Wrapper = styled.div`
     display: flex;    
     justify-content: space-between;
     gap:1em;
-    overflow: hidden;
+    
 
     @media screen and (max-width: 768px){
         padding: 1em;
         flex-direction: column-reverse;
         text-align: center;
+        overflow: hidden;
     }
    
 `

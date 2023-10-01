@@ -19,18 +19,31 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 body {
   font-size: 18px;
+
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
+
 }
 
 p {
   font-size: 1.5em;
   color: var(--Grayish-Blue)
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    .mobile {
+      overflow-y: hidden;
+
+    }
+  }
+
 }

@@ -12,6 +12,7 @@ export const NewWrraper = styled.section`
 
     @media screen and (max-width: 768px){
         padding: 2em 1em;
+        
     }
     
 
@@ -36,8 +37,9 @@ export const NewWrraper = styled.section`
             width: 100%;
 
             h4{          
-            font-size: 1.5em;
+            font-size: 1.4em;
             text-align: center;
+            text-transform: capitalize;
         }
         }
     }
@@ -64,10 +66,10 @@ export const NewsletterContent = styled.form`
         font-style: italic;
         font-size:16px;        
         align-self: center;
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0 11px 11px;
 
         @media screen and (max-width: 768px){
-            font-size: 14px;
+            font-size: 12px;
         }
     }   
     

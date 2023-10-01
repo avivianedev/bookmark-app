@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import LogoImage from "./LogoImage"
 
 import {
@@ -11,7 +11,8 @@ import {
     Logo,
     SectionDesktop,
     SectionMobile,
-    TagImage
+    TagImage,
+    NavMobile
 
 
 } from "./Styles"
@@ -19,9 +20,19 @@ import {
 
 
 
+
 const Header = () => {
 
     const [showMenu, SetShowMenu] = useState(false);
+
+    useEffect(() => {
+        if (showMenu) {
+            document.body.style.overflowY = "hidden";
+        } else {
+            document.body.style.overflowY = "auto";
+        }
+    }, [showMenu]);
+
 
 
     function showMenuIcon(event) {
@@ -31,7 +42,7 @@ const Header = () => {
 
     return (
         <HeaderContainer className="container">
-            <SectionDesktop>
+            <SectionDesktop className={!showMenu ? "section_desktop" : ""}>
                 <Logo className="logo">
                     <LogoImage />
                 </Logo>
@@ -46,7 +57,7 @@ const Header = () => {
                 </Navbar>
 
             </SectionDesktop>
-            <SectionMobile  >
+            <SectionMobile className={showMenu ? "mobile" : ""} >
                 {showMenu ? <Logo className="logo">
                     <LogoImage
                         fillColor="#000"
@@ -56,14 +67,14 @@ const Header = () => {
                     />
                 </Logo>
                     :
-                    <Logo className="logo">
-                        <LogoImage
+                    <Logo className="logo" >
+                        <LogoImage className={showMenu ? "mobile" : ""}
 
                         />
                     </Logo>
                 }
-                {showMenu && <Navbar className={showMenu ? 'open' : ''}>
-                    <ListContainer>
+                {showMenu && <NavMobile className={showMenu ? "mobile" : ""}  >
+                    <ListContainer >
                         <ListItem><Link onClick={(e) => e.preventDefault()} href="">FEATURES</Link></ListItem>
                         <ListItem><Link onClick={(e) => e.preventDefault()} href="">PRICING</Link></ListItem>
                         <ListItem><Link onClick={(e) => e.preventDefault()} href="">CONTACT</Link></ListItem>
@@ -74,7 +85,7 @@ const Header = () => {
                         <img src="/assets/images/icon-facebook.svg" alt="logo facebook" />
                         <img src="/assets/images/icon-twitter.svg" alt="logo twitter" />
                     </div>
-                </Navbar>}
+                </NavMobile>}
 
                 {showMenu ? <TagImage src="/assets/images/icon-close.svg" alt="menu-image" onClick={showMenuIcon} /> : <TagImage src="/assets/images/icon-hamburger.svg" alt="menu-image" onClick={showMenuIcon} />}
 

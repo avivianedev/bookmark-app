@@ -11,6 +11,7 @@ export const ModalWrapper = styled.section`
     padding: 2em;
     position: absolute;
     bottom: 150%;
+    
 
     @keyframes up{
         from {

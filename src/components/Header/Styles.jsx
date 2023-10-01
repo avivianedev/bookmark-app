@@ -4,29 +4,35 @@ export const HeaderContainer = styled.header`
      display: flex;     
      padding: 3em;
      align-items: center;     
-     
+     z-index: 3;
+     overflow: hidden;
 
     @media screen and (max-width: 768px){
         padding: 0;
-        
+       
     }
-
 `
 export const SectionDesktop = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100%;    
+
     @media screen and (max-width: 768px){
-        display: none;
+        display: none;   
        
     }
-
 `
 export const TagImage = styled.img`
     cursor: pointer;
-    z-index: 2;
+    z-index: 2;    
+
+    @media screen and (max-width: 768px){
+        z-index: 2;
+        
+        
+    }
 
 `
 export const SectionMobile = styled.section`
@@ -34,18 +40,17 @@ export const SectionMobile = styled.section`
     display: none;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 100%;   
+    width: 100%;     
+    
     
     
     @media screen and (max-width: 768px){       
         display: flex;        
         position: relative;
-        padding: 2em;
-        
-        
-    }
-
+        padding: 2em;        
+        z-index: 4;       
+        overflow: hidden;         
+    }  
 `
 
 export const Logo = styled.div`
@@ -55,7 +60,12 @@ export const Logo = styled.div`
     align-items: center;
     cursor: pointer;
     z-index: 3;
-    z-index: ${(props => props.zIndex)}
+    z-index: ${(props => props.zIndex)};
+
+    @media screen and (max-width: 768px){
+                  
+       
+    }
 `
 
 
@@ -63,17 +73,10 @@ export const Navbar = styled.nav`
     display: flex;
     align-items: center;
     width: 100%;
-    height: 100%;
-    gap: 2em ;
-    &.open {
-        height: 100vh;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        position:fixed;
-       
-    }
+    height: 100%;   
+    gap: 2em ;   
     
-    @media screen and (max-width: 768px){        
+    @media screen and (max-width: 768px){          
         position: absolute;       
         align-items: center;
         justify-content: flex-start;
@@ -86,23 +89,71 @@ export const Navbar = styled.nav`
         padding: 4em 1em; 
         gap: 1em;
         opacity: 0.8;       
-        transition: 2s;
-        z-index: 2;        
+        transition: 2s;        
+        z-index: 2;     
+        position: fixed;   
+          
     }
 
        .social{
         display: flex;
-        height: 100vh;
+        height: 100%;
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: flex-end;        
         gap: 1em;
+       
         
         img{
             cursor: pointer;
+            
         }
         
     }
     
+`
+
+export const NavMobile = styled.nav`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;   
+    gap: 2em ;
+    overflow: hidden;   
+    
+    @media screen and (max-width: 768px){           
+        position: absolute;       
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;    
+        height: 100vh;          
+        flex-direction: column;              
+        top:0;
+        right: 0;        
+        background-color: var(--Very-Dark-Blue);
+        padding: 4em 1em; 
+        gap: 1em;
+        opacity: 0.8;       
+        transition: 2s;        
+        z-index: 2;     
+        position: fixed;   
+          
+    }
+
+       .social{
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        justify-content: flex-end;        
+        gap: 1em;
+       
+        
+        img{
+            cursor: pointer;
+            
+        }
+        
+    }
+
 `
 
 export const ListContainer = styled.ul`
@@ -112,13 +163,15 @@ export const ListContainer = styled.ul`
     justify-content: flex-end;
     align-items: center;
     gap: 1em;
+    
 
     @media screen and (max-width: 768px){        
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
         gap:0;
-        margin-top: 2em;
+        margin-top: 2em;       
+        
         
     }
 `
@@ -128,16 +181,16 @@ export const ListItem = styled.li`
     @media screen and (max-width: 768px){        
         padding: 1em 0;        
         width: 90%;
-        text-align: center;
+        text-align: center;      
+       
+
         &:nth-child(odd) {            
             border-top: 1px solid white;
             border-bottom: 1px solid white;
-            border-radius: 0;
-            
-        }       
-       
+            border-radius: 0;            
+        } 
         
-}
+    }
 `
 
 export const Link = styled.a`
@@ -145,10 +198,11 @@ export const Link = styled.a`
     font-size: 20px;
     cursor: pointer;
     color: var(--Very-Dark-Blue);
+
     &:hover { 
-        color: var(--Soft-Red);
-        
+        color: var(--Soft-Red);        
     }
+
     @media screen and (max-width: 768px){
         display:flex;          
         width: 100%;
@@ -158,16 +212,15 @@ export const Link = styled.a`
         font-size: 24px;
         font-weight: normal;
         padding: .8em 2em;   
+       
         &:hover {        
         color: white;         
         border-radius:7px;   
         border: 2px solid white;
         background-color: transparent;
-        color: white;       
-    
+        color: white;      
         
-    }
-       
+        }       
     }
 `
 
@@ -200,8 +253,8 @@ export const BtnMenu = styled.button`
         border: 2px solid white;
         background-color: transparent;
         color: white;
+             
         
-        
-    }
+        }
     }
 `
