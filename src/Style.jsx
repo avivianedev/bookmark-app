@@ -16,6 +16,10 @@ export const Wrapper = styled.div`
         text-align: center;
         overflow: hidden;
     }
+    @media screen and (max-width: 1440px){
+        padding: 1em;        
+       
+    }
    
 `
 export const ContentText = styled.section`   
@@ -36,6 +40,10 @@ export const ContentText = styled.section`
     @media screen and (max-width: 768px){
         width: 100%;
         padding:  2em 1em;
+    }
+    @media screen and (max-width: 1440px){
+        padding: 1em 2em;        
+       
     }
 
 `

@@ -11,18 +11,24 @@ export const HeaderContainer = styled.header`
         padding: 0;
        
     }
-`
+    
+    
+    `
+
 export const SectionDesktop = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;    
+    
 
     @media screen and (max-width: 768px){
         display: none;   
        
     }
+
+    
 `
 export const TagImage = styled.img`
     cursor: pointer;
@@ -62,7 +68,7 @@ export const Logo = styled.div`
     z-index: 3;
     z-index: ${(props => props.zIndex)};
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1440px){
                   
        
     }

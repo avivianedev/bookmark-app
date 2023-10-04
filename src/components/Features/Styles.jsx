@@ -101,7 +101,11 @@ export const ImageContainer = styled.div`
     width: 100%;
     height: 100%;
    }
-   
+   @media screen and (max-width: 1440px){
+    width: 45%;
+    height: 450px;      
+       
+   }
 
 `
 export const ImageFeatures = styled.img`    
@@ -154,6 +158,7 @@ export const FDetails = styled.div`
     justify-content: center;
     width: 40%;
     height: 100%;
+    
     .details-content{
         width: 70%;
         display: flex;           
@@ -168,8 +173,25 @@ export const FDetails = styled.div`
             font-size: 22px;
         }
         .btncontainer{
-        align-self: flex-start;
-}
+            align-self: flex-start;        
+        }
+
+        @media screen and (max-width: 1440px){     
+               
+            h3{
+            font-size: 1.5em;
+            }
+            p{
+                text-align: start;
+            }
+           
+        }
+                  
+                       
+           
+      
+
+        
     }
    
     @media screen and (max-width: 768px){
