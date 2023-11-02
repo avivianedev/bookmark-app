@@ -96,7 +96,12 @@ export const ImageContainer = styled.div`
    
    @media screen and (max-width: 1440px){
     width: 45%;
-    height: 450px;      
+    height: 450px;    
+    
+    img{
+        width: 90%;
+        height: 100%;
+    }
        
    }
    @media screen and (max-width: 768px){
@@ -152,6 +157,9 @@ export const ImageEffectFeatures = styled.div`
     }
     @media screen and (max-width: 375px){
         
+    }
+    @media screen and (max-width: 1440px){
+        width: 120%;
     }
 `
 export const FDetails = styled.div` 
