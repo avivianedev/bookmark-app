@@ -62,4 +62,4 @@ export default function Features() {
         </FeatureComponent >
     )
 
-} 1;;
+} 

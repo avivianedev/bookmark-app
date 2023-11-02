@@ -93,6 +93,12 @@ export const ImageContainer = styled.div`
    width: 40%;
    height: 450px;   
 
+   
+   @media screen and (max-width: 1440px){
+    width: 45%;
+    height: 450px;      
+       
+   }
    @media screen and (max-width: 768px){
     width: 100%;
     height: 100%;
@@ -100,11 +106,6 @@ export const ImageContainer = styled.div`
    @media screen and (max-width: 375px){
     width: 100%;
     height: 100%;
-   }
-   @media screen and (max-width: 1440px){
-    width: 45%;
-    height: 450px;      
-       
    }
 
 `

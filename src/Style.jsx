@@ -61,7 +61,7 @@ export const BtnContainer = styled.div`
 `
 
 export const Title = styled.h1`
-    font-size:4rem;    
+    font-size:3rem;    
     animation: appear 2s;
 
     @keyframes appear {
@@ -71,7 +71,10 @@ export const Title = styled.h1`
     to {
         opacity:1
     }
-}
+    }
+    @media screen and (max-width: 1440px){
+        font-size: 2.8em;
+    }
 
     @media screen and (max-width: 768px){
         font-size: 3em;
@@ -101,6 +104,10 @@ export const Btn = styled.button`
 export const ImageContainer = styled.section`   
     width:100%;
     height: 100%;
+
+    img{
+        width: 90%;
+    }
     
     
     @media screen and (max-width: 768px){        
@@ -131,7 +138,7 @@ export const Image = styled.img`
 export const ImageEffect = styled.div`
     position: absolute;
     width: 30%;
-    height: 45%;
+    height: 40%;
     top: 40%;
     right: 0;
     border-radius: 100% 0 0 100%;
@@ -141,16 +148,22 @@ export const ImageEffect = styled.div`
     top: ${(props) => props.top};
     height: ${(props) => props.height};
     width: ${(props) => props.width};      
-    background-color: var(--Soft-Blue);    
-
-    @media screen and (max-width: 768px){
-        width: 70%;
-        top: 20%;
-        height: 25%;
+    background-color: var(--Soft-Blue);  
+    
+   
+    @media screen and (max-width: 1440px){
+        top: 30%;     
+        width: 35%;   
+       
     }
     @media screen and (max-width: 375px){
-        width: 70%;
-        top: 25%;
-        height: 30%;
+        width: 60%;
+        top: 20%;
+        height: 22%;
+    }
+    @media screen and (max-width: 768px){
+        width: 60%;
+        top: 20%;
+        height: 20%;
     }
 `
